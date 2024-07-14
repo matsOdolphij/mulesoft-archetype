@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <name>mule-archetype-nfi</name>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>nl.nfi</groupId>
+  <artifactId>mule-archetype-nfi</artifactId>
+  <version>1.2.2</version>
+
+  <packaging>maven-archetype</packaging>
+
+  <properties>
+    <org-apache-maven-archetype>3.2.1</org-apache-maven-archetype>
+  </properties>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>${org-apache-maven-archetype}</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>${org-apache-maven-archetype}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/repository/mulesoft-archetypes/</url>
+    </repository>
+  </distributionManagement>
+
+</project>
